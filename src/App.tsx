@@ -14,7 +14,7 @@ function App() {
           <aside className="side-bar">
               <SideBar />
           </aside>
-          <main>'
+          <main>
               <Main />
           </main>
       </section>

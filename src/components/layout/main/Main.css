@@ -1,7 +1,9 @@
-.Main > h1 {
-    text-align: center;
+.Main {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.Main {
-    overflow: scroll;
+.hey {
+    height: 5000px;
 }
