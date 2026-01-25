@@ -1,17 +1,14 @@
 import {cardsDeck} from "../../arrays-&-models/tarot-deck-array/tarotDeck";
-import {TarotCard} from "../tarot-card/TarotCard";
-
+import {TarotCardContainer} from "../tarot-card/TarotCardContainer";
 export function TarotDeck() {
     return (
         <div className="tarot-deck-container">
-            {cardsDeck.map((card) =>
-                <TarotCard
+            {cardsDeck.map(card => (
+                <TarotCardContainer
                     key={card.id}
-                    id={card.id}
-                    name={card.name}
-                    image={card.image}
+                    tarotCard={card}
                 />
-            )}
+            ))}
         </div>
     );
 }

@@ -1,5 +1,7 @@
+// tarotCard.interface.ts
 export interface TarotCard {
     id: number;
-    image: string;
+    src: string;
+    alt: string;
     name: string;
 }
