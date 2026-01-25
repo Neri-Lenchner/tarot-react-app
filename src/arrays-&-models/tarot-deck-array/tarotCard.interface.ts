@@ -3,5 +3,6 @@ export interface TarotCard {
     id: number;
     src: string;
     alt: string;
-    name: string;
+    name: string;          // required
+    className: string;     // required (or ? if optional)
 }

@@ -31,4 +31,20 @@ main {
     width: 85%;
     height: 100%;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
+
+.tarot-deck-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px ;
+    padding: 24px;
+    background: #f0f8ff;
+    min-height: 400px;
+    overflow-y: auto;
+}
+
+

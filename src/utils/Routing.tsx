@@ -2,17 +2,17 @@ import {JSX} from "react";
 import {Route, Routes} from "react-router-dom";
 import Main from "../components/layout/main/Main";
 import {TarotDeck} from "../components/tarot-deck/TarotDeck";
-// import CourseForm from "../component/course-form/CourseForm";
-// import CourseListRoute from "../component/course-list-route/CourseListRoute";
-
+import './Routing.css';
 
 function Routing(): JSX.Element {
     return (
-        <Routes>
-            <Route path="/tarot-deck" element={<TarotDeck />}/>
-            <Route path="*" element={<Main />}/>
-            <Route path="/" element={<Main />}/>
-        </Routes>
+        <div className="routing-container">
+            <Routes>
+                <Route path="/tarot-deck" element={<TarotDeck />}/>
+                <Route path="*" element={<Main />}/>
+                <Route path="/" element={<Main />}/>
+            </Routes>
+        </div>
     );
 }
 
