@@ -8,6 +8,7 @@ import Main from "../components/layout/main/Main";
 function Routing(): JSX.Element {
     return (
         <Routes>
+            <Route path="/tarot-deck" element={<Main />}/>
             <Route path="*" element={<Main />}/>
             <Route path="/" element={<Main />}/>
         </Routes>

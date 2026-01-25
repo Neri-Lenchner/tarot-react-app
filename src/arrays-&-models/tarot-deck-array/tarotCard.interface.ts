@@ -1,5 +1,5 @@
 export interface TarotCard {
     id: number;
-    image: string;       // HTML string containing <img> tag
+    image: string;
     name: string;
 }
