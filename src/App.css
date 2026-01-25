@@ -22,13 +22,13 @@ section {
 }
 
 .side-bar {
-    width: 10%;
+    width: 15%;
     height: 100%;
     border: 1px solid black;
 }
 
 main {
-    width: 90%;
+    width: 85%;
     height: 100%;
     border: 1px solid black;
 }
