@@ -1,8 +1,11 @@
-export function SpreadHeader() {
+
+export function SpreadHeader({ spreadThem, clearSpread }: { spreadThem: any; clearSpread: any }) {
+
+
     return (
         <div className="spread-header-container">
-            <button>Spread Them</button>
-            <button>Clear Spread</button>
+            <button onClick={spreadThem}>Spread Them</button>
+            <button onClick={clearSpread}>Clear Spread</button>
         </div>
     );
 }
