@@ -4,32 +4,48 @@ import { SpreadHeader } from "./celtic-spread-components/CelticSpreadHeader";
 import { Spread } from "./celtic-spread-components/CelticSpread";
 
 export function CelticSpreadGlobal() {
-    const [isSpread, setIsSpread] = useState(
-        JSON.parse(localStorage.getItem("isSpread") || "false")
-    );
+    const [isSpread, setIsSpread] = useState<boolean>(() => {
+        const saved = localStorage.getItem("isSpread");
+        if (saved === null) return false;
+        try {
+            return saved === "true";   // simpler & safer than JSON.parse for booleans
+        } catch {
+            return false;
+        }
+    });
 
-    const [selectedCards, setSelectedCards] = useState(
-        JSON.parse(localStorage.getItem("selectedCards") || "[]")
-    );
-
+    const [selectedCards, setSelectedCards] = useState<any[]>(() => {
+        const saved = localStorage.getItem("selectedCards");
+        if (saved === null) return [];
+        try {
+            return JSON.parse(saved);
+        } catch {
+            return [];
+        }
+    });
 
     // Save to localStorage whenever isSpread or selectedCards changes
     useEffect(() => {
-        localStorage.setItem("isSpread", JSON.stringify(isSpread));
-        localStorage.setItem("selectedCards", JSON.stringify(selectedCards));
+        console.log("→ isSpread became:", isSpread);
+        console.log("→ selectedCards count:", selectedCards.length);
+        if (selectedCards.length > 0) {
+            console.log("First card:", selectedCards[0]);
+            // Check: does it have .image ? What is the key really called?
+        }
     }, [isSpread, selectedCards]);
 
     const spreadThem = () => {
-        console.log("Spreading cards, deck size:", cardsDeck.length);
-        const shuffledDeck = [...cardsDeck];
-        for (let i = shuffledDeck.length - 1; i > 0; i--) {
-            const random = Math.floor(Math.random() * (i + 1));
-            [shuffledDeck[i], shuffledDeck[random]] = [shuffledDeck[random], shuffledDeck[i]];
+        console.log("Spreading cards... deck size:", cardsDeck.length);
 
-        }
-        setSelectedCards(shuffledDeck.slice(0, 10));
+        const shuffled = [...cardsDeck].sort(() => Math.random() - 0.5); // simpler shuffle
+        const chosen = shuffled.slice(0, 10);
+
+        console.log("Selected cards:", chosen);           // ← inspect what you actually set
+
+        setSelectedCards(chosen);
         setIsSpread(true);
-        console.log(isSpread);
+
+        // Log after update won't help – use useEffect instead (see below)
     };
 
     const clearSpread = () => {

@@ -11,70 +11,70 @@ export function Spread({ isSpread , cards }: {isSpread: boolean, cards: any[]}) 
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[0]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[0]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-2">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[1]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[1]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-3">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[2]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[2]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-4">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[3]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[3]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-5">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[4]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[4]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-6">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[5]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[5]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-7">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[6]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[6]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-8">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[7]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[7]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-9">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[8]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[8]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
             <div className="card-container-10">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
                 ) : (
-                    <img className="card" src={cards[9]?.image || "/Tarot-deck-images/cards-back.jpg"} />
+                    <img className="card" src={cards[9]?.src || "/Tarot-deck-images/cards-back.jpg"} />
                 )}
             </div>
         </div>
