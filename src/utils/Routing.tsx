@@ -5,6 +5,9 @@ import {TarotDeck} from "../components/tarot-deck-route/tarot-deck/TarotDeck";
 import './Routing.css';
 import {TarotDeckRoute} from "../components/tarot-deck-route/TarotDeckRoute";
 import {CelticSpreadRoute} from "../components/celtic-spread-route/CelticSpreadRoute";
+import {
+    ThreeCardsSpreadRoute
+} from "../components/three-cards-spread-route/ThreeCardsSpreadRoute";
 
 function Routing(): JSX.Element {
     return (
@@ -12,6 +15,7 @@ function Routing(): JSX.Element {
             <Routes>
                 <Route path="/tarot-deck" element={<TarotDeckRoute />}/>
                 <Route path="/celtic-spread" element={<CelticSpreadRoute />}/>
+                <Route path="/three-cards-spread" element={<ThreeCardsSpreadRoute />}/>
                 <Route path="*" element={<Main />}/>
                 <Route path="/" element={<Main />}/>
             </Routes>
