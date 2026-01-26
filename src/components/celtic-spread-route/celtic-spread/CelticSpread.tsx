@@ -1,7 +1,7 @@
 export function CelticSpread() {
     return (
         <div className="celtic-spread-container">
-            <CelticSpread />
+            Celtic Spread
         </div>
 
     );
