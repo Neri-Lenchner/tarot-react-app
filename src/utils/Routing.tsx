@@ -14,7 +14,7 @@ function Routing(): JSX.Element {
         <div className="routing-container">
             <Routes>
                 <Route path="/tarot-deck" element={<TarotDeckRoute />}/>
-                <Route path="/celtic-spread" element={<CelticSpreadRoute />}/>
+                <Route path="/celtic-spread-global" element={<CelticSpreadRoute />}/>
                 <Route path="/three-cards-spread" element={<ThreeCardsSpreadRoute />}/>
                 <Route path="*" element={<Main />}/>
                 <Route path="/" element={<Main />}/>
