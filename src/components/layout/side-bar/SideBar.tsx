@@ -7,8 +7,8 @@ function SideBar(): JSX.Element {
     return (
         <div className="SideBar">
             <div className="links">
-                <NavLink to="/new-course">New Course</NavLink>
-                <NavLink to="/courses-list">View Courses List</NavLink>
+                <NavLink to="/celtic-spread">Celtic Spread</NavLink>
+                <NavLink to="/three-cards-spread">Three Cards Spread</NavLink>
             </div>
         </div>
     );

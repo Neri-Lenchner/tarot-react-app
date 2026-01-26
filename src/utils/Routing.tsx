@@ -1,14 +1,15 @@
 import {JSX} from "react";
 import {Route, Routes} from "react-router-dom";
 import Main from "../components/layout/main/Main";
-import {TarotDeck} from "../components/tarot-deck/TarotDeck";
+import {TarotDeck} from "../components/tarot-deck-route/tarot-deck/TarotDeck";
 import './Routing.css';
+import {TarotDeckRoute} from "../components/tarot-deck-route/TarotDeckRoute";
 
 function Routing(): JSX.Element {
     return (
         <div className="routing-container">
             <Routes>
-                <Route path="/tarot-deck" element={<TarotDeck />}/>
+                <Route path="/tarot-deck" element={<TarotDeckRoute />}/>
                 <Route path="*" element={<Main />}/>
                 <Route path="/" element={<Main />}/>
             </Routes>

@@ -5,7 +5,7 @@ function Header(): JSX.Element {
 
     return (
         <div className="Header">
-            <h1>Header</h1>
+            <h1>TAROT Cards Spreads</h1>
         </div>
     );
 }

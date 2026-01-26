@@ -1,6 +1,6 @@
 import React, {JSX, useState} from 'react';
 import './Main.css';
-import {TarotDeck} from "../../tarot-deck/TarotDeck";
+import {TarotDeck} from "../../tarot-deck-route/tarot-deck/TarotDeck";
 
 function Main(): JSX.Element {
 
