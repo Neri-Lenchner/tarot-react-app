@@ -26,10 +26,11 @@ export function CelticSpreadGlobal() {
 
     // Save to localStorage whenever isSpread or selectedCards changes
     useEffect(() => {
-        console.log("isSpread became:", isSpread);
-        if (selectedCards.length > 0) {
-            console.log("First card:", selectedCards[0]);
-        }
+        console.log("Saving to localStorage — isSpread:", isSpread);
+        localStorage.setItem("isSpread", JSON.stringify(isSpread));
+
+        console.log("Saving selectedCards — length:", selectedCards.length);
+        localStorage.setItem("selectedCards", JSON.stringify(selectedCards));
     }, [isSpread, selectedCards]);
 
     const spreadThem = () => {
