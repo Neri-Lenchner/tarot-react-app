@@ -1,5 +1,4 @@
 export function Spread({ isSpread , cards }: {isSpread: boolean, cards: any[]}) {
-    console.log("Spread rendering, isSpread:", isSpread, "cards:", cards);
     return (
         <div className="spread-container">
             <div className="heading">

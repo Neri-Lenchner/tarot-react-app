@@ -26,16 +26,13 @@ export function CelticSpreadGlobal() {
 
     // Save to localStorage whenever isSpread or selectedCards changes
     useEffect(() => {
-        console.log("→ isSpread became:", isSpread);
-        console.log("→ selectedCards count:", selectedCards.length);
+        console.log("isSpread became:", isSpread);
         if (selectedCards.length > 0) {
             console.log("First card:", selectedCards[0]);
-            // Check: does it have .image ? What is the key really called?
         }
     }, [isSpread, selectedCards]);
 
     const spreadThem = () => {
-        console.log("Spreading cards... deck size:", cardsDeck.length);
 
         const shuffled = [...cardsDeck].sort(() => Math.random() - 0.5); // simpler shuffle
         const chosen = shuffled.slice(0, 10);
@@ -51,7 +48,6 @@ export function CelticSpreadGlobal() {
     const clearSpread = () => {
         console.log("Clearing spread");
         setIsSpread(false)
-        console.log(isSpread);
         setSelectedCards([]);
 
         localStorage.removeItem("isSpread");
