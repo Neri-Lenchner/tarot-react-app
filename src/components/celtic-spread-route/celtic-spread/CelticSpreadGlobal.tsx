@@ -1,6 +1,8 @@
 import { useState, useEffect} from "react";
 import { cardsDeck } from "../../../arrays-&-models/tarot-deck-array/tarotDeck";
 import { SpreadHeader } from "./celtic-spread-components/CelticSpreadHeader";
+import { Spread } from "./celtic-spread-components/CelticSpread";
+
 export function CelticSpreadGlobal() {
     const [isSpread, setIsSpread] = useState(
         JSON.parse(localStorage.getItem("isSpread") || "false")
@@ -27,23 +29,33 @@ export function CelticSpreadGlobal() {
         }
         setSelectedCards(shuffledDeck.slice(0, 10));
         setIsSpread(true);
+        console.log(isSpread);
     };
 
     const clearSpread = () => {
         console.log("Clearing spread");
-        setIsSpread(false);
+        setIsSpread(false)
+        console.log(isSpread);
         setSelectedCards([]);
-        // Optionally clear localStorage:
+
         localStorage.removeItem("isSpread");
         localStorage.removeItem("selectedCards");
     };
     return (
         <div className="celtic-spread-container">
-            <SpreadHeader
-                spreadThem={spreadThem}
-                clearSpread={clearSpread} />
-
+            <>
+                <SpreadHeader
+                    spreadThem={spreadThem}
+                    clearSpread={clearSpread}
+                />
+                <Spread
+                    isSpread={isSpread}
+                    cards={selectedCards}
+                />
+            </>
         </div>
+
+
 
     );
 }

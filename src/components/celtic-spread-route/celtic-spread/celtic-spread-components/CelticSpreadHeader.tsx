@@ -1,7 +1,6 @@
 
 export function SpreadHeader({ spreadThem, clearSpread }: { spreadThem: any; clearSpread: any }) {
 
-
     return (
         <div className="spread-header-container">
             <button onClick={spreadThem}>Spread Them</button>
