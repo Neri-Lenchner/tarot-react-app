@@ -1,3 +1,4 @@
+import './CelticSpread.css';
 export function Spread({ isSpread , cards }: {isSpread: boolean, cards: any[]}) {
     return (
         <div className="spread-container">
