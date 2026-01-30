@@ -1,7 +1,8 @@
 import { useState, useEffect} from "react";
 import { cardsDeck } from "../../../arrays-&-models/tarot-deck-array/tarotDeck";
 import { SpreadHeader } from "./celtic-spread-components/CelticSpreadHeader";
-import { Spread } from "./celtic-spread-components/CelticSpread";
+import { CelticSpread } from "./celtic-spread-components/CelticSpread";
+import './CelticSpreadGlobal.css';
 
 export function CelticSpreadGlobal() {
     const [isSpread, setIsSpread] = useState<boolean>(() => {
@@ -61,7 +62,7 @@ export function CelticSpreadGlobal() {
                     spreadThem={spreadThem}
                     clearSpread={clearSpread}
                 />
-                <Spread
+                <CelticSpread
                     isSpread={isSpread}
                     cards={selectedCards}
                 />

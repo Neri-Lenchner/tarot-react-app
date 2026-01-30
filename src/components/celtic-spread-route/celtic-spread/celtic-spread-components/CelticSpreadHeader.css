@@ -1,4 +1,14 @@
 .spread-header-container {
+    background: linear-gradient(300deg, rgb(9, 53, 9), midnightblue);
     text-align: center;
-    margin: 20px;
+
+}
+
+.spread-header-container button {
+    border: none;
+    background-color: midnightblue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
 }

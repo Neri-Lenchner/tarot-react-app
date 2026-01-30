@@ -1,4 +1,4 @@
-
+import './CelticSpreadHeader.css';
 export function SpreadHeader({ spreadThem, clearSpread }: { spreadThem: any; clearSpread: any }) {
 
     return (

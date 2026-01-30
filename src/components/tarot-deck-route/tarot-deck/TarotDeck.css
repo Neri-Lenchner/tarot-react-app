@@ -1,4 +1,5 @@
 .tarot-deck-container {
     background-color: darkgreen;
+    overflow-y: auto;
 }
 

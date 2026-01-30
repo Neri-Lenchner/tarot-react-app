@@ -6,7 +6,7 @@ function Main(): JSX.Element {
 
 
     return (
-        <div className="Main tarot-deck-container">
+        <div className="tarot-deck-container">
             <TarotDeck />
         </div>
     );

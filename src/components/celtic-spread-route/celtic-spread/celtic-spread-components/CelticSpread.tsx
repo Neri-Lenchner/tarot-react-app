@@ -1,12 +1,8 @@
 import './CelticSpread.css';
-export function Spread({ isSpread , cards }: {isSpread: boolean, cards: any[]}) {
+export function CelticSpread({ isSpread , cards }: {isSpread: boolean, cards: any[]}) {
     return (
         <div className="spread-container">
-            <div className="heading">
-                <div>
-                    Tarot Spread
-                </div>
-            </div>
+
             <div className="card-container-1">
                 {!isSpread ? (
                     <img className="card" src="/Tarot-deck-images/cards-back.jpg" />
