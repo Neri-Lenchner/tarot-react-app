@@ -1,5 +1,5 @@
 .tarot-deck-container {
-    background-color: darkgreen;
+    background: linear-gradient(180deg, #2f0106, #fb1601);
     overflow-y: auto;
 }
 
