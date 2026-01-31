@@ -35,9 +35,19 @@ export function CelticSpreadGlobal(): JSX.Element {
         localStorage.setItem("selectedCards", JSON.stringify(selectedCards));
     }, [isSpread, selectedCards]);
 
+    function spreadThem1(): TarotCard[] {
+        const shuffledDeck: TarotCard[] = [...cardsDeck];
+        for (let i: number = shuffledDeck.length - 1 ; i >= 0 ; i--) {
+            let j: number = Math.floor(Math.random() * (i + 1));
+            [shuffledDeck[j], shuffledDeck[i]] = [shuffledDeck[i], shuffledDeck[j]];
+        }
+        return shuffledDeck;
+    }
+
     const spreadThem: () => void = (): void => {
 
-        const shuffled: TarotCard[] = [...cardsDeck].sort((): number => Math.random() - 0.5); // simpler shuffle
+        const shuffled: TarotCard[] = spreadThem1();
+        // const shuffled: TarotCard[] = [...cardsDeck].sort((): number => Math.random() - 0.5); // simpler shuffle
         const chosen: TarotCard[] = shuffled.slice(0, 10);
 
         console.log("Selected cards:", chosen);           // ← inspect what you actually set
