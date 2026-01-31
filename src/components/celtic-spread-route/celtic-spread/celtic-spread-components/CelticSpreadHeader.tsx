@@ -1,5 +1,8 @@
+import * as React from 'react';
 import './CelticSpreadHeader.css';
-export function SpreadHeader({ spreadThem, clearSpread }: { spreadThem: any; clearSpread: any }) {
+import {JSX} from "react";
+
+export function SpreadHeader({ spreadThem, clearSpread }: { spreadThem: any; clearSpread: any }): JSX.Element {
 
     return (
         <div className="spread-header-container">
@@ -8,11 +11,4 @@ export function SpreadHeader({ spreadThem, clearSpread }: { spreadThem: any; cle
         </div>
     );
 }
-
-// props: { spreadThem, clearSpread }
-
-// <div className="spread-header-container">
-//             <button onClick="">Spread Them</button>
-//             <button onClick="">Clear Spread</button>
-//         </div>
 

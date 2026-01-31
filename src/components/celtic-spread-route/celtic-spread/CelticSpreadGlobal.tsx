@@ -1,12 +1,13 @@
-import { useState, useEffect} from "react";
+import {useState, useEffect, JSX} from "react";
 import { cardsDeck } from "../../../arrays-&-models/tarot-deck-array/tarotDeck";
 import { SpreadHeader } from "./celtic-spread-components/CelticSpreadHeader";
 import { CelticSpread } from "./celtic-spread-components/CelticSpread";
 import './CelticSpreadGlobal.css';
+import {TarotCard} from "../../../arrays-&-models/tarot-deck-array/tarotCard.interface";
 
-export function CelticSpreadGlobal() {
-    const [isSpread, setIsSpread] = useState<boolean>(() => {
-        const saved = localStorage.getItem("isSpread");
+export function CelticSpreadGlobal(): JSX.Element {
+    const [isSpread, setIsSpread] = useState<boolean>((): boolean => {
+        const saved: string | null = localStorage.getItem("isSpread");
         if (saved === null) return false;
         try {
             return saved === "true";   // simpler & safer than JSON.parse for booleans
@@ -15,8 +16,8 @@ export function CelticSpreadGlobal() {
         }
     });
 
-    const [selectedCards, setSelectedCards] = useState<any[]>(() => {
-        const saved = localStorage.getItem("selectedCards");
+    const [selectedCards, setSelectedCards] = useState<TarotCard[]>((): TarotCard[] => {
+        const saved: string | null = localStorage.getItem("selectedCards");
         if (saved === null) return [];
         try {
             return JSON.parse(saved);
@@ -34,20 +35,18 @@ export function CelticSpreadGlobal() {
         localStorage.setItem("selectedCards", JSON.stringify(selectedCards));
     }, [isSpread, selectedCards]);
 
-    const spreadThem = () => {
+    const spreadThem: () => void = (): void => {
 
-        const shuffled = [...cardsDeck].sort(() => Math.random() - 0.5); // simpler shuffle
-        const chosen = shuffled.slice(0, 10);
+        const shuffled: TarotCard[] = [...cardsDeck].sort((): number => Math.random() - 0.5); // simpler shuffle
+        const chosen: TarotCard[] = shuffled.slice(0, 10);
 
         console.log("Selected cards:", chosen);           // ← inspect what you actually set
 
         setSelectedCards(chosen);
         setIsSpread(true);
-
-        // Log after update won't help – use useEffect instead (see below)
     };
 
-    const clearSpread = () => {
+    const clearSpread: () => void = (): void => {
         console.log("Clearing spread");
         setIsSpread(false)
         setSelectedCards([]);
@@ -68,9 +67,6 @@ export function CelticSpreadGlobal() {
                 />
             </>
         </div>
-
-
-
     );
 }
 
